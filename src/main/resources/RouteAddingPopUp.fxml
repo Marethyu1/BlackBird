@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="370.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seng202.group2.blackbirdControl.RouteAddingPopUpController">
+   <top>
+      <GridPane hgap="10.0" prefHeight="452.0" prefWidth="370.0" vgap="10.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="*Airline Name" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="*Source Airport" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="*Destination Airport" GridPane.rowIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Stops" GridPane.rowIndex="4" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Equipment" GridPane.rowIndex="5" />
+             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Codeshare" GridPane.rowIndex="3" />
+            <TextField fx:id="Equipment" promptText="Enter Equipment..." GridPane.columnIndex="1" GridPane.rowIndex="5" onKeyPressed="#enterPressed"/>
+            <CheckBox fx:id="Codeshare" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="3" onKeyPressed="#enterPressed"/>
+            <ComboBox fx:id="airlineSelection" prefWidth="150.0" GridPane.columnIndex="1" onKeyPressed="#enterPressed"/>
+            <ComboBox fx:id="sourceSelection" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" onKeyPressed="#enterPressed"/>
+            <ComboBox fx:id="destSelection" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" onKeyPressed="#enterPressed"/>
+            <TextField fx:id="Stops" promptText="Enter number of stops..." GridPane.columnIndex="1" GridPane.rowIndex="4" onKeyPressed="#enterPressed"/>
+
+             <Text fx:id="addRouteInvalidText" fill="#bf0606" strokeType="OUTSIDE" strokeWidth="0.0" text="Required field is missing" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+             <GridPane GridPane.columnIndex="1" GridPane.rowIndex="6">
+                 <children>
+                     <Button mnemonicParsing="false" onAction="#cancelButtonPressed" text="Cancel" />
+                     <Button mnemonicParsing="false" onAction="#createButtonPressed" text="Create" GridPane.columnIndex="1" />
+                 </children>
+                 <columnConstraints>
+                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                 </columnConstraints>
+                 <rowConstraints>
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                 </rowConstraints>
+             </GridPane>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </GridPane>
+   </top>
+</BorderPane>
